@@ -5,10 +5,10 @@ services:
     image: nye
     container_name: nye_countdown
     ports:
-      - "8000:8000"
+      - "80:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.port=8000"
+      - "traefik.port=80"
       - "traefik.http.routers.portfolio.rule=Host(`nye.olivierboeren.nl`)"
       - "traefik.frontend.entrypoints=http,https"
       - "traefik.http.routers.portfolio.tls=true"
