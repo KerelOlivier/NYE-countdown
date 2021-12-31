@@ -2,7 +2,7 @@ version: '3'
 
 services:
   portfolio:
-    image: kerelolivier/portfolio
+    image: nyecountdown
     container_name: portfolio
     volumes:
       - ./:/app
