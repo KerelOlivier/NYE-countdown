@@ -2,8 +2,8 @@ version: '3'
 
 services:
   portfolio:
-    image: nyecountdown
-    container_name: nyecountdown
+    image: nye
+    container_name: nye_countdown
     ports:
       - "80:80"
     labels:
