@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  portfolio:
+    image: kerelolivier/portfolio
+    container_name: portfolio
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - "8080:80"
+    labels:
+      #- "traefik.enable=true"
+      - "traefik.port=8000"
+      - "traefik.http.routers.portfolio.rule=Host(`nye.olivierboeren.nl`)"
+      - "traefik.frontend.entrypoints=http,https"
+      - "traefik.http.routers.portfolio.tls=true"
+      - "traefik.http.routers.portfolio.tls.certresolver=le"
