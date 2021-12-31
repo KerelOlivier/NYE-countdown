@@ -1,12 +1,14 @@
 version: '3'
 
 services:
-  countdown:
+  portfolio:
     image: nye
     container_name: nye_countdown
+    ports:
+      - "80:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.port=80"
+      - "traefik.port=2022"
       - "traefik.http.routers.portfolio.rule=Host(`nye.olivierboeren.nl`)"
       - "traefik.frontend.entrypoints=http,https"
       - "traefik.http.routers.portfolio.tls=true"
