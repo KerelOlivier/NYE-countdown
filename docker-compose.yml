@@ -4,11 +4,8 @@ services:
   portfolio:
     image: nyecountdown
     container_name: nyecountdown
-    volumes:
-      - ./:/app
-      - /app/node_modules
     ports:
-      - "8080:80"
+      - "2022:8080"
     labels:
       #- "traefik.enable=true"
       - "traefik.port=8000"
