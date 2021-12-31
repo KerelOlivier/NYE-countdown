@@ -50,7 +50,7 @@ function draw() {
 
   ctx.font = "100px Arial";
   ctx.textAlign = "center";
-  remaining = 0;
+  
   if (remaining <= 0) {
     for (let i = 0; i < fireworks.length; i++) {
       if (fireworks[i].done) {
