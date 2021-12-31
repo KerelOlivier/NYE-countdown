@@ -40,6 +40,7 @@ function draw() {
   let now = new Date();
   let NYE = new Date(now.getFullYear(), 11, 31, 24, 0, 0);
   let remaining = Math.floor((NYE - now) / 1000);
+  let r = remaining;
   let hours = Math.floor(remaining / (60 * 60));
   remaining = remaining % (60 * 60);
   let minutes = Math.floor(remaining / 60);
@@ -50,8 +51,8 @@ function draw() {
 
   ctx.font = "100px Arial";
   ctx.textAlign = "center";
-  
-  if (remaining <= 0) {
+
+  if (r <= 0) {
     for (let i = 0; i < fireworks.length; i++) {
       if (fireworks[i].done) {
         fireworks.splice(i, 1);
