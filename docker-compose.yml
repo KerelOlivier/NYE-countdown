@@ -3,7 +3,7 @@ version: '3'
 services:
   portfolio:
     image: nyecountdown
-    container_name: portfolio
+    container_name: nyecountdown
     volumes:
       - ./:/app
       - /app/node_modules
